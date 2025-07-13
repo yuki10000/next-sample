@@ -11,11 +11,38 @@
 
 作業ブランチは以下の命名規則に従って作成する
 
-- **feature-** 新機能開発
-- **bug-** バグ修正
-- **fix-** 軽微な修正
-- **improve-** 既存機能の改善
-- **enhancement-** 機能拡張
+- **feature-[Issue番号]-** 新機能開発
+- **bug-[Issue番号]-** バグ修正
+- **fix-[Issue番号]-** 軽微な修正
+- **improve-[Issue番号]-** 既存機能の改善
+- **enhancement-[Issue番号]-** 機能拡張
+
+### ブランチ命名例
+
+```text
+feature-10-user-authentication
+bug-15-login-error
+fix-20-typo-in-header
+improve-25-performance
+enhancement-30-search-filter
+```
+
+### ブランチ命名の詳細ルール
+
+- **形式** `種別-Issue番号-内容説明`
+- **種別** feature, bug, fix, improve, enhancement
+- **Issue番号** GitHubのIssue番号（#は含めない）
+- **内容説明** ハイフン区切りで内容が分かる英語表記
+
+### 具体的な命名例
+
+```text
+feature-10-user-authentication
+bug-15-login-error
+fix-20-typo-in-header
+improve-25-performance
+enhancement-30-search-filter
+```
 
 ### ブランチ作成例
 
@@ -23,19 +50,20 @@
 # 新機能開発の場合（Issue #10の場合）
 git checkout development
 git pull origin development
-git checkout -b feature-user-authentication
+git checkout -b feature-10-user-authentication
 
 # バグ修正の場合（Issue #15の場合）
 git checkout development
 git pull origin development
-git checkout -b bug-login-error
+git checkout -b bug-15-login-error
 ```
 
 ### ブランチとIssueの関連付け
 
 - 1つのブランチは1つのIssueに対応させる
-- ブランチ名は内容が分かりやすい名前にする
-- Issue番号はコミットメッセージとPRタイトルで管理する
+- ブランチ名にIssue番号を含める
+- ブランチ名の形式は「種別-Issue番号-内容」とする
+- 内容部分はハイフン区切りで分かりやすい名前にする
 
 ## 開発フロー
 

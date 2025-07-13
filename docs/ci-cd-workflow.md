@@ -15,7 +15,7 @@ GitHub ActionsとVercelを使用した自動ビルド・デプロイシステム
 
 ### 開発環境 (Development)
 
-- **ブランチ** development  
+- **ブランチ** development
 - **トリガー** developmentブランチへのpush
 - **デプロイ先** Vercel Preview環境
 - **URL** 固定の開発URL
@@ -82,7 +82,7 @@ pushする前に以下のコマンドを実行して問題がないことを確�
 # Lintチェック
 npm run lint
 
-# フォーマットチェック  
+# フォーマットチェック
 npm run format:check
 
 # ビルドテスト
