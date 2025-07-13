@@ -65,8 +65,10 @@ npm run format:check
 
 詳細な開発・運用手順については以下のドキュメントを参照してください。
 
-- [Git運用ガイド](./docs/git-workflow.md)
-- [CI/CD運用ガイド](./docs/ci-cd-workflow.md)
+- [完全セットアップガイド](./docs/complete-setup-guide.md) - 全体的なセットアップ手順
+- [Git運用ガイド](./docs/git-workflow.md) - ブランチ戦略とコミットルール
+- [CI/CD運用ガイド](./docs/ci-cd-workflow.md) - 自動デプロイとパイプライン設定
+- [Qiita記事版](./docs/qiita-article.md) - 要点をまとめた記事形式
 
 ## 環境
 
