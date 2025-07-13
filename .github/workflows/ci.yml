@@ -4,20 +4,20 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-on: 
+on:
   push:
     branches:
-      - main           # 本番環境
-      - development    # 開発環境
-      - 'feature-**'   # 機能ブランチ
-      - 'bug-**'       # バグ修正ブランチ
-      - 'fix-**'       # 修正ブランチ
-      - 'improve-**'   # 改善ブランチ
+      - main # 本番環境
+      - development # 開発環境
+      - 'feature-**' # 機能ブランチ
+      - 'bug-**' # バグ修正ブランチ
+      - 'fix-**' # 修正ブランチ
+      - 'improve-**' # 改善ブランチ
       - 'enhancement-**' # 機能拡張ブランチ
   pull_request:
     branches:
-      - main           # 本番環境へのPR
-      - development    # 開発環境へのPR
+      - main # 本番環境へのPR
+      - development # 開発環境へのPR
 
 jobs:
   test:
