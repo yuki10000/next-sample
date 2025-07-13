@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Sample Project
 
-## Getting Started
+Next.jsを使用したサンプルプロジェクトです。
 
-First, run the development server:
+## 技術構成
+
+- **フレームワーク** Next.js 15.3.5
+- **言語** TypeScript
+- **スタイリング** Tailwind CSS
+- **リンター** ESLint + Prettier
+- **デプロイ** Vercel
+- **CI/CD** GitHub Actions
+
+## 開発環境のセットアップ
 
 ```bash
+# 依存関係のインストール
+npm ci
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+開発サーバーが起動したら [http://localhost:3000](http://localhost:3000) でアプリケーションを確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 利用可能なコマンド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 開発サーバー起動
+npm run dev
 
-## Learn More
+# プロダクションビルド
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# プロダクションサーバー起動
+npm start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# コード品質チェック
+npm run lint
+npm run lint:fix
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# コードフォーマット
+npm run format
+npm run format:check
+```
 
-## Deploy on Vercel
+## プロジェクト構成
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+├── .github/workflows/    # GitHub Actions設定
+├── docs/                # プロジェクトドキュメント
+├── public/              # 静的ファイル
+├── src/
+│   └── app/            # Next.js App Router
+├── .editorconfig       # エディタ設定
+├── .gitattributes      # Git属性設定
+├── .prettierrc.json    # Prettier設定
+├── eslint.config.mjs   # ESLint設定
+├── next.config.ts      # Next.js設定
+├── tailwind.config.ts  # Tailwind CSS設定
+└── vercel.json         # Vercel設定
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 開発フロー
+
+詳細な開発・運用手順については以下のドキュメントを参照してください。
+
+- [Git運用ガイド](./docs/git-workflow.md)
+- [CI/CD運用ガイド](./docs/ci-cd-workflow.md)
+
+## 環境
+
+- **本番環境** mainブランチから自動デプロイ
+- **開発環境** developmentブランチから自動デプロイ  
+- **プレビュー環境** PRまたは機能ブランチから自動生成
+
+## ライセンス
+
+MIT
