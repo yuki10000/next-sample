@@ -1,0 +1,25 @@
+# Ignore artifacts:
+build/
+coverage/
+dist/
+node_modules/
+.next/
+.vercel/
+
+# Ignore all HTML files:
+*.html
+
+# Ignore generated files:
+*.log
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore config files that should not be formatted
+.env*
+.gitignore
+.gitattributes
+
+# Ignore markdown files in certain directories
+node_modules/**/*.md
